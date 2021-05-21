@@ -1,5 +1,7 @@
 # Emman Voice Bot in Python
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/274aa55b0dbc413f9fe3a957f944a326)](https://www.codacy.com/gh/MujyKun/EmmanBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MujyKun/EmmanBot&amp;utm_campaign=Badge_Grade)
+
 **[Become a Patron!](https://www.patreon.com/bePatron?u=38971435)**
 
 ## What is it?
