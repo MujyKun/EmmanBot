@@ -7,9 +7,15 @@
 ## What is it?
 EmmanBot is a simple bot that plays local audio files. It has volume changing, dictionary, and looping features. 
 
-The purpose of this bot was originally just to say "Bruh" in a voice channel but has switched to a more customizable 
-approach for allowing a lot of custom keywords so that users may use each others voice-lines to form sentences 
-in a voice chat.
+The purpose of this bot was originally just to say "Bruh" in a voice channel but has switched to a more  
+customizable approach for allowing a lot of custom keywords so that users may use each others  
+voice-lines to form sentences in a voice chat.
+
+If you would like to test the bot before-hand, There is a version of the bot running 24/7, but do keep in mind that  
+it was not designed for the general public, so there is no way to upload your own audio files and will have generic  
+audio files.
+
+[Click Here to Invite EmmanBot.](https://discord.com/oauth2/authorize?client_id=845180622418870283&scope=bot&permissions=1609956823)
 
 ## How to use:
 
