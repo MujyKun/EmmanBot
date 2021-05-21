@@ -1,0 +1,5 @@
+aiofiles==0.4.0
+asyncio==3.4.3
+discord.py==1.6.0
+discord.py[Voice]
+python-dotenv==0.17.0
