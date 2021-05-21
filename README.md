@@ -61,11 +61,11 @@ Command Usage Examples
 `*audio` would list all audio sub-directories and main audio files.
 `*audio mujy` would list all sub-directories and audio files under `mujy.`
 
-`dic 40 4 mujy.test mujy.phrase` would loop `test phrase` `4` times at volume level `40`.
+`*dic 40 4 mujy.test mujy.phrase` would loop `test phrase` `4` times at volume level `40`.
 
 Please note that the default volume level of `dic` is 100, and the default loop is 1. In order to call words with
 the default settings, you will need to type them like so:  
-`dic 100 1 mujy.test mujy.phrase` would say `test phrase` `1` time at volume level `100`.
+`*dic 100 1 mujy.test mujy.phrase` would say `test phrase` `1` time at volume level `100`.
 
 `*join` will join my voice channel if I am in one.
 
@@ -73,9 +73,9 @@ the default settings, you will need to type them like so:
 
 `*ping` would respond with "Pong" if it is online and running.
 
-`*play` would play the default bruh (voiced by Emman himself) at volume 100 once.
+`*play` would play the default bruh (voiced by Emman himself) at volume `100` `once`.
 
-`*play mujy.test 60 3 would play mujy's test audio at 60% volume 3 times.
+`*play mujy.test 60 3` would play mujy's test audio at `60`% volume `3` times.
 
 `*help` would bring up a list of all the commands their descriptions.
 
