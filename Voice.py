@@ -210,7 +210,7 @@ class Voice(commands.Cog):
             if not voice_client:
                 return
             await asyncio.sleep(3)
-            if not voice_client.is_playing:
+            if not voice_client.is_playing():
                 await voice_client.disconnect()
                 return True
         except:

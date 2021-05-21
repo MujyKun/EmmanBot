@@ -38,7 +38,7 @@ for usage instantly.
 
 If you are using subdirectories, you would use dot notation to access the files for example:
 
-If `audio` is your main audio directory, and I have a subfolder called `mujy`, and an audio file inside of `mujy` called 
+If `audio` is your main audio directory, and I have a sub-folder called `mujy`, and an audio file inside of `mujy` called 
 `good.mp3`, then in my command usage, I would use `mujy.good` without the file type. 
 
 When adding your own file, make sure the audio file is .mp3 as it is the default (and no others are currently allowed).
