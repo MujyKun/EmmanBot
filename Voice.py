@@ -26,7 +26,7 @@ class Voice(commands.Cog):
             }
         }
         """
-        self.audio = {}
+        self.audio_play = {}
 
         """
         {
@@ -40,7 +40,7 @@ class Voice(commands.Cog):
             }
         }
         """
-        self.dic = {}
+        self.dic_play = {}
 
     @commands.command(aliases=["bruh"])
     async def play(self, ctx, file_name="bruh", volume=100, loop=1):
@@ -64,7 +64,7 @@ class Voice(commands.Cog):
             "loop": loop,
             "count": 0
         }
-        self.audio[ctx.guild.id] = audio_info
+        self.audio_play[ctx.guild.id] = audio_info
         try:
             self.voice_client_play(voice_client, file_name, volume, loop)
         except:
@@ -97,7 +97,7 @@ class Voice(commands.Cog):
         if not voice_client:
             return await ctx.send("Could not get voice client.")
 
-        self.dic[ctx.guild.id] = dic
+        self.dic_play[ctx.guild.id] = dic
         try:
             self.voice_client_play(voice_client, file_names[0], volume)
         except:
@@ -255,11 +255,11 @@ class Voice(commands.Cog):
             run_coro = asyncio.run_coroutine_threadsafe(dc_from_vc, self.client.loop)
             run_coro.result()
 
-            if self.dic.get(voice_client.guild.id):
-                self.dic.pop(voice_client.guild.id)
+            if self.dic_play.get(voice_client.guild.id):
+                self.dic_play.pop(voice_client.guild.id)
 
-            if self.audio.get(voice_client.guild.id):
-                self.audio.pop(voice_client.guild.id)
+            if self.audio_play.get(voice_client.guild.id):
+                self.audio_play.pop(voice_client.guild.id)
             return
         file_name = file_name.replace(".", "/")
 
@@ -269,7 +269,7 @@ class Voice(commands.Cog):
         can_play = False
 
         full_file_path = f"{self.audio_path}{file_name}.mp3"
-        for root, dirs, files in walk(self.audio_path):
+        for root, _, files in walk(self.audio_path):
             for file in files:
                 current_path = f"{root}/{file}"
                 if current_path == full_file_path:
@@ -289,9 +289,9 @@ class Voice(commands.Cog):
         for voice_client in self.client.voice_clients:
             if voice_client.is_playing() or voice_client.is_paused():
                 continue
-            audio_info: dict = self.audio.get(voice_client.guild.id)
+            audio_info: dict = self.audio_play.get(voice_client.guild.id)
             if not audio_info:
-                dic: dict = self.dic.get(voice_client.guild.id)
+                dic: dict = self.dic_play.get(voice_client.guild.id)
                 if not dic:
                     return
                 audio_names: list = dic.get("file_names")

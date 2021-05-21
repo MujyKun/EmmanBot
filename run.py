@@ -8,9 +8,7 @@ bot_name = "Emman"
 
 
 class Emman(commands.Bot):
-    """
-    Startup Client for Bot.
-    """
+    """Startup Client for Bot."""
 
     def __init__(self, **options):
         # Set to True if running a test bot.
