@@ -272,6 +272,7 @@ class Voice(commands.Cog):
         for root, _, files in walk(self.audio_path):
             for file in files:
                 current_path = f"{root}/{file}"
+                current_path = current_path.replace("//", "/")  # there are cases where 2 slashes may appear.
                 if current_path == full_file_path:
                     can_play = True
         if not can_play:
