@@ -11,7 +11,7 @@ in a voice chat.
 
 ## How to use:
 
-Clone the Repo: ``git clone https://github.com/MujyKun/Weverse.git``  
+Clone the Repo: ``git clone https://github.com/MujyKun/EmmanBot.git``  
 
 Rename `.env.example` to `.env`.  
 
